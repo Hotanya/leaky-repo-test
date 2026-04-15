@@ -5,7 +5,7 @@ on: [pull_request, push, workflow_dispatch]
 jobs:
   scan:
     name: gitleaks
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Clean stale gitleaks temp file
         run: rm -f /tmp/gitleaks.tmp
